@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- use the link tag to attach the CSS file -->
+    <link href="styles/styles.css" rel="stylesheet">
+    <title>Week 4 - Contact Forms</title>
+</head>
+<body>
+    <header>
+        <h1>Contact us!!</h1>
+    </header>
+    <nav>
+        <!-- navigation is often organized in lists for easier styling-->
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <!-- external pages need the full address... use _blank to open in a new tab-->
+             <li><a href="https://imdac.github.io" target="_blank">More web stuff</a></li>
+        </ul>
+    </nav>
+    <main>
+        <!-- HTML forms let users enter information into your site -->
+         <!-- form require two attributes to tell them how to submit:
+          action tells the form where to go (what page)
+          method tells the form how to send the information
+            the post method sends the information in an encrypted packge
+            the get method sends the information unencryptedn in the browser -->
+         <form action="contact.html" method="get">
+            <section>
+                <!-- to link the lable with the input, 
+                use 'for' on the lable matching the 'id' on the input -->
+                <label for="name">Name:</label>
+                <input id="name" type="text" name="name" placeholder="Full Name">
+
+                <!-- with input, you can specify different types-->
+                <label for="email">Email:</label>
+                <input id="email" type="email" name="email" placeholder="Email Address">
+            </section>
+            <section>
+                <!-- the sections are block elements, 
+                 so these form elements will appear on the text line -->
+                 <label for="pass">Password:</label>
+                 <input id="pass" type="password" name="pass" placeholder="Password">
+
+                 <label for="when">Birthdate:</label>
+                 <input id="when" type="date" name="when">
+
+                 <!-- for the number field, you can set a minimum and maximum
+                  (so the user can't enter things higher or lower)-->
+                 <label for="how">How Many?</label>
+                 <input id="how" type="number" min="0" max="100" name="how" value="20">
+            </section>
+            
+            <section>
+                <!-- to make a dropdown menu, use the select tag -->
+                 <label for="colors">Colors?</label>
+                <select id="colors" name="colors">
+                    <option value="red">Red</option>
+                    <option value="blue">Blue</option>
+                    <option value="green" selected>Green</option>
+                </select>
+
+                <!-- radio buttons operate as a set - check one, and the others uncheck-->
+                 <label for="one">1</label>
+                 <input id="one" type="radio" name="how many" value="1">
+                 
+                 <label for="two">2</label>
+                 <input id="two" type="radio" name="how many" value="2">
+
+                 <label for="three">3</label>
+                 <input id="three" type="radio" name="how many" value="3">
+            </section>
+
+            <section>
+                <!-- to submit a form, add a submit button
+                 this button will submit everything contained inside of one form tag-->
+                 <input type="submit" value="Submit The Form" name="submit">
+            </section>
+         </form>
+    </main>
+    <footer>
+
+    </footer>
+
+</body>
+</html>

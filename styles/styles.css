@@ -4,8 +4,14 @@ body{
     background-color: lightblue;
 }
 
-/* this will apply styles to all images on your page */
+/* this will apply styles to all images on your page except “两只shafu”*/
 img{
     /* only style one dimension - width or height - to keep the image ratio */
-    height: 570px;
+    height: 590px;
+}
+
+/* this will apply styles to the specific image with the class "两只shafu" */
+img.shafu{
+    /* only style one dimension - width or height - to keep the image ratio */
+    width: 300px;
 }
